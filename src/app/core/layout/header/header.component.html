@@ -1,0 +1,10 @@
+<nav class="bg-white shadow dark:bg-gray-800 flex ml-40">
+  <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize">
+      <a  [routerLink]="['/home', userId]"  class="text-gray-800 transition-colors duration-300 transform mx-1.5 sm:mx-6">Tours</a>
+
+      <a href="bookings" class="hover:text-gray-800 transition-colors duration-300 mx-1.5 sm:mx-6">Reservas</a>
+  </div>
+  <div class=" p-6 mx-auto text-gray-600 capitalize">
+    <a (click)="logout()" class=" hover:text-gray-800 transition-colors duration-300 transform mx-1.5 sm:mx-6">Cerrar Sesión</a>
+  </div>
+</nav>
