@@ -1,0 +1,43 @@
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-10">
+<section class="max-w-2xl p-6 mx-auto bg-white rounded-md shadow-md">
+  <h2 class="text-lg font-semibold text-gray-700 capitalize">digita los siguientes campos</h2>
+
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+
+
+      <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+          <div>
+              <label class="text-gray-700" for="nameUser">Nombre</label>
+              <input id="nameUser" type="text" formControlName="nameUser" placeholder="Nombre del usuario" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="surName">Apellido </label>
+              <input id="surName" type="text" formControlName="surName" placeholder="Apellido del usuario" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="dateBooking_str">Fecha de reserva</label>
+              <input id="dateBooking_str" type="date" formControlName="dateBooking_str" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="numPerson">Numero de personas</label>
+              <input id="numPerson" type="number" formControlName="numPerson" placeholder="Numero de personas" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+            <label class="text-gray-700" for="tours_id">Tour</label>
+            <input id="tours_id" type="number" formControlName="tours_id" placeholder="Id del tour" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+        </div>
+      </div>
+
+
+      <div class="flex justify-end mt-6">
+        <button class="btn px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-20" (click)="closeModal()">Cerrar</button>
+          <button class="btn px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700" type="submit">Guardar</button>
+      </div>
+  </form>
+
+</section>
+</div>
