@@ -1,0 +1,8 @@
+.modal-container {
+  max-width: 80%;
+  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 20; /* Asegúrate de que el z-index sea mayor que el fondo oscuro */
+}

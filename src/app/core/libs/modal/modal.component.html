@@ -1,0 +1,43 @@
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-10" *ngIf="showModal">
+
+  <section class="modal-container max-w-2xl p-6 mx-auto bg-white rounded-md shadow-md">
+    <h2 class="text-lg font-semibold text-gray-700 capitalize">Actualizar información del tour</h2>
+
+    <form [formGroup]="tourForm" (ngSubmit)="onSubmit()" >
+
+      <input type="hidden" name="token" value="">
+
+      <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+        <div>
+          <label class="text-gray-700" for="nameTour">Nombre</label>
+          <input id="nameTour" type="text" placeholder="Nombre del tour" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+            formControlName="nameTour">
+        </div>
+
+        <div>
+          <label class="text-gray-700" for="descriptionTour">Descripción </label>
+          <input id="descriptionTour" type="text" placeholder="Descripción del tour" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+            formControlName="descriptionTour">
+        </div>
+
+        <div>
+          <label class="text-gray-700" for="date_str">Fecha</label>
+          <input id="date_str" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+            formControlName="date_str">
+        </div>
+
+        <div>
+          <label class="text-gray-700" for="price">Precio</label>
+          <input id="price" type="number" placeholder="Precio del tour" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+            formControlName="price">
+        </div>
+      </div>
+
+      <div class="flex justify-end mt-6">
+        <button class="btn px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-20" (click)="closeModal()">Cancelar</button>
+        <button class="btn px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700" type="submit">Actualizar Tour</button>
+      </div>
+    </form>
+
+  </section>
+</div>
